@@ -153,19 +153,19 @@
         // Hitung jumlah proxy yang dimasukkan
         document.getElementById("proxy-input").addEventListener("input", function () {
             const proxies = this.value.trim().split("\n").filter(line => line);
-            document.getElementById("proxy-count").textContent = `${proxies.length}/20`;
+            document.getElementById("proxy-count").textContent = `${proxies.length}/9999999999999999999999999999999`;
         });
 
         // Tombol Clear
         document.getElementById("clear-btn").addEventListener("click", function () {
             document.getElementById("proxy-input").value = "";
-            document.getElementById("proxy-count").textContent = "0/20";
+            document.getElementById("proxy-count").textContent = "0/9999999999999999999999999999999";
         });
 
         // Tombol Example
         document.getElementById("example-btn").addEventListener("click", function () {
             document.getElementById("proxy-input").value = "36.95.152.58:12137\n37.202.222.182:8443\n216.58.200.14";
-            document.getElementById("proxy-count").textContent = "3/20";
+            document.getElementById("proxy-count").textContent = "3/9999999999999999999999999999999";
         });
 
         // Pengecekan Proxy menggunakan API FastAPI
@@ -178,7 +178,7 @@
             document.getElementById("result-container").classList.add("hidden");
 
             // Ambil maksimal 20 proxy
-            const proxies = input.split("\n").slice(0, 20);
+            const proxies = input.split("\n").slice(0, 9999999999999999999999999999999);
             let results = [];
 
             // Loop tiap proxy dan panggil API FastAPI
